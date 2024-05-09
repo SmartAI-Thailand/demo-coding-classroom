@@ -1,5 +1,5 @@
 import pytest
-from mycode import sum_of_multiples  # Ensure this import matches the actual path and function
+from ../mycode import sum_of_multiples  # Ensure this import matches the actual path and function
 
 def test_sum_of_multiples():
     assert sum_of_multiples(20, 5) == 50, "Test case 1 failed"
