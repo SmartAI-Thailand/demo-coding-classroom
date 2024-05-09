@@ -18,3 +18,21 @@ Write a function named sum_of_multiples that takes two integers: n and x. The fu
 def sum_of_multiples(n: int, x: int) -> int:
     pass
 ```
+
+## Challenge 2: Minimum Window Substring
+Problem Statement:
+Write a function named min_window_substring that takes two strings: s and t. The function should return the minimal substring of s that contains all the characters in t. If no such substring exists, return an empty string.
+
+**Examples:**
+
+- If s = "ADOBECODEBANC" and t = "ABC", the minimal substring of s that contains all the characters in t is "BANC".
+- If s = "a", and t = "aa", since s does not contain all the characters in t, return an empty string.
+
+**Constraints:**
+- The lengths of `s` and `t` are at most 10000.
+- `s` and `t` consist of English letters.
+### Function Signature:
+```
+def min_window_substring(s: str, t: str) -> str:
+    pass
+```
