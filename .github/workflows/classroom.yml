@@ -15,22 +15,16 @@ jobs:
       uses: actions/checkout@v4
     - name: Challenge 1
       id: challenge-1
-      uses: classroom-resources/autograding-python-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
+        test-name: Challenge 1
+        setup-command: pip install pytest
+        command: pytest test/challenge1.py
         timeout: 10
         max-score: 10
-        setup-command: ''
-    - name: Challenge 2
-      id: challenge-2
-      uses: classroom-resources/autograding-python-grader@v1
-      with:
-        timeout: 10
-        max-score: 50
-        setup-command: ''
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
         CHALLENGE-1_RESULTS: "${{steps.challenge-1.outputs.result}}"
-        CHALLENGE-2_RESULTS: "${{steps.challenge-2.outputs.result}}"
       with:
-        runners: challenge-1,challenge-2
+        runners: challenge-1
