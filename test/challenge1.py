@@ -1,5 +1,4 @@
-import pytest
-from mycode import sum_of_multiples  # Ensure this import matches the actual path and function
+from demo_coding_classroom.mycode import sum_of_multiples
 
 def test_sum_of_multiples():
     assert sum_of_multiples(20, 5) == 50, "Test case 1 failed"
@@ -8,6 +7,3 @@ def test_sum_of_multiples():
     assert sum_of_multiples(30, 7) == 7 + 14 + 21 + 28, "Test case 4 failed"
     assert sum_of_multiples(50, 10) == 10 + 20 + 30 + 40 + 50, "Test case 5 failed"
     print("All test cases passed!")
-
-# Run the test function
-test_sum_of_multiples()
