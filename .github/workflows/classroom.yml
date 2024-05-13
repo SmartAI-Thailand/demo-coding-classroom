@@ -18,7 +18,7 @@ jobs:
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Challenge 1
-        setup-command: pip install pytest
+        setup-command: pip install pytest && pip install -e .
         command: pytest test/challenge1.py
         timeout: 10
         max-score: 10
